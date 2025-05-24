@@ -43,7 +43,7 @@ jobs:
       - name: Executando Testes e2e
         run: yarn run e2e
       - name: Uploadar relatório de testes
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v2
         with:
           name: relatorio-de-testes
-          path: ./relatorio/
+          path: reports/coverage/lcov-report/src/components
