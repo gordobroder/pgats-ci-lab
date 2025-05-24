@@ -45,4 +45,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: relatorio-de-testes
-          path: reports/coverage/lcov-report/src/**
+          path: reports/coverage/lcov-report/index.html
