@@ -26,8 +26,6 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: latest
-      
-      - uses: actions/upload-artifact@v2
       # instalacao do YARN
       - name: Instalando Yarn
         run: npm install -g yarn
@@ -44,7 +42,7 @@ jobs:
       - name: Executando Testes e2e
         run: yarn run e2e
       - name: Uploadar relatório de testes
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: relatorio-de-testes
           path: reports/coverage/lcov-report/src/**
