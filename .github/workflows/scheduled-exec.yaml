@@ -13,6 +13,7 @@ name: 'Execucao Agendada'
 # Regras de disparo (gatilhos/triggers)
 # gatilho de execl manual = workflow_dispatch
 
+# At 06:00 on Monday.
 on:
   schedule:
     - cron: '0 6 * * 1'
