@@ -33,7 +33,7 @@ jobs:
 
       # instalacao de dependencias
       - name: Instalando Playwright
-        run: yarn playwright install
+        run: sudo apt-get update && yarn playwright install
 
       # executar os testes e2e
       - name: Executando Testes e2e
