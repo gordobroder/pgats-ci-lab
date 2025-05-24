@@ -42,3 +42,8 @@ jobs:
       # executar os testes e2e
       - name: Executando Testes e2e
         run: yarn run e2e
+      - name: Uploadar relatório de testes
+        uses: actions/upload-artifact@v3
+        with:
+          name: relatorio-de-testes
+          path: ./relatorio/
