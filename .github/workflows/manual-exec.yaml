@@ -25,15 +25,19 @@ jobs:
       # instalacao do node
       - uses: actions/setup-node@v4
         with:
-          node-version: 22.x
+          node-version: latest
 
       # instalacao do YARN
       - name: Instalando Yarn
         run: npm install -g yarn
 
       # instalacao de dependencias
+      - name: Instalando dependencias
+        run: yarn
+
+      # Instalando Playwright
       - name: Instalando Playwright
-        run: sudo apt-get update && yarn playwright install
+        run: yarn playwright install
 
       # executar os testes e2e
       - name: Executando Testes e2e
