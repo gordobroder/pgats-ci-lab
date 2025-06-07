@@ -10,11 +10,9 @@ name: 'Execucao Manual'
 on:
   workflow_dispatch:
 
-
 # trabalhos/tarefas dentro da pipeline = jobs
 jobs:
   e2e-tests:
-
     # maquina que o job vai executar
     runs-on: ubuntu-latest
 
@@ -41,7 +39,7 @@ jobs:
       # executar os testes e2e
       - name: Executando Testes e2e
         run: yarn run e2e
-      
+
       - name: Publish Test Summary Results
         run: npx github-actions-ctrf ctrf/ctrf-report.json
       - name: Publish Test Report
